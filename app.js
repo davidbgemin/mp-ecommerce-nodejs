@@ -81,18 +81,18 @@ app.get('/', function (req, res) {
 });
 
 app.get('/detail', async function (req, res) {
-    // console.log(req.query);
+    console.log(req.query);
     // crear el objeto item y agregarlo al array de items de la preferencia (leer la documentación para ello):
     // { img: './assets/l6g6.jpg', title: 'LG G6', price: '10000', unit: '1' }
+    const { img, title, price, unit } = req.query; // destructuracion
     const item = {
-        id: "1234",
-        title: req.query.title,
-        description: "Dispositivo móvil de Tienda e-comemrce",
-        picture_url: req.query.img,
-        // category_id: "", /* category_id no es obligatorio, en este caso no se pone porque el producto no tiene categoría */
-        quantity: +req.query.unit,
-        currency_id: "PEN", /* currency_id es obligatorio */
-        unit_price: +req.query.price,
+      id: 1234,
+      title: title,
+      description: "Dispositivo móvil de Tienda e-commerce",
+      picture_url: req.get("host") + img.substr(1),
+      quantity: +unit,
+      currency_id: "PEN",
+      unit_price: +price,
     };
 
     preferencia.items.push(item);
