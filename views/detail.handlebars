@@ -84,7 +84,12 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <a href="{{init_point}}">Comprar con redireccionamiento</a>
+                            <script
+                                src="https://www.mercadopago.com.pe/integrations/v1/web-payment-checkout.js"
+                                data-preference-id='{{id}}'
+                                data-button-label="Compra con modal (no funciona el return)">
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -92,4 +97,4 @@
         </div>
     </div>
 </div>
-   
+<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
