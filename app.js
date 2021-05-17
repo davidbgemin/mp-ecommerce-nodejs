@@ -43,12 +43,12 @@ const cliente = {
 
 const metodos_pago = {
   installments: 6,
-  excluded_payment_types: [
+  excluded_payment_methods: [
     {
       id: "diners",
     },
   ],
-  excluded_payment_methods: [
+  excluded_payment_types: [
     {
       id: "atm",
     },
