@@ -44,7 +44,7 @@ const metodos_pago = {
     installments: 6,
     exclude_payment_methods: [
         {
-            id: "dinners"
+            id: "diners"
         }
     ],
     exclude_payment_types: [
