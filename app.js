@@ -66,7 +66,7 @@ const preferencia = {
   payer: cliente,
   auto_return: "approved",
   notification_url: "", // un endpoint en el cual mercado pago nos mandara la actualizacion de nuestro pago mediante un metodo POST y nosotros le tenemos que responder un estado 200 o 201 para que no haga spam a ese endpoint, OJO: no poner la notification_url en modo localhost ya que mp no creara la preferenca por declara una url invalida (127.0.0.1 | localhost)
-  external_reference: "ederiveroman@gmail.com",
+  external_reference: "davidbgemin@gmail.com",
 };
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
